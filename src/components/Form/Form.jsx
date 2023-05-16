@@ -27,10 +27,10 @@ export const Form = () => {
   const handleFormSubmit = e => {
     e.preventDefault();
     reset();
-    const newContact = { ...form };
+    // const newContact = { ...form };
     contacts.some(contact => contact.name === form.name)
       ? alert('The contact is already in the contact list')
-      : dispatch(addContacts(newContact));
+      : dispatch(addContacts(form));
   };
 
   const { name, number } = form;

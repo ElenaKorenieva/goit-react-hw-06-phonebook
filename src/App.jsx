@@ -4,17 +4,6 @@ import { ContactsList } from 'components/ContactsList';
 import { Container } from 'App.styled';
 
 export const App = () => {
-  // const [contacts, setContacts] = useState(() => {
-  //   const localStoregeContacts = localStorage.getItem('contacts');
-  //   const parsedContacts = JSON.parse(localStoregeContacts);
-  //   return parsedContacts && parsedContacts.length
-  //     ? parsedContacts
-  //     : defaultContacts;
-  // });
-
-  // useEffect(() => {
-  //   localStorage.setItem('contacts', JSON.stringify(contacts));
-  // }, [contacts]);
 
   return (
     <Container>
