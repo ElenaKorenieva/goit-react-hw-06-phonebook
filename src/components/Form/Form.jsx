@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { nanoid } from 'nanoid';
 import { FormEl, InputEl, LabelEl, SubmitBtn } from './Form.styled';
 import { addContacts } from 'redux/contactsSlice';
 
