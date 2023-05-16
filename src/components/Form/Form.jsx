@@ -8,10 +8,6 @@ export const Form = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.contacts);
 
-  useEffect(() => {
-    localStorage.setItem('contacts', JSON.stringify(contacts));
-  });
-
   const [form, setForm] = useState({
     name: '',
     number: '',
@@ -32,7 +28,7 @@ export const Form = () => {
   const handleFormSubmit = e => {
     e.preventDefault();
     reset();
-    const newContact = { ...form, id: nanoid() };
+    const newContact = { ...form };
     contacts.some(contact => contact.name === form.name)
       ? alert('The contact is already in the contact list')
       : dispatch(addContacts(newContact));
